@@ -38,7 +38,16 @@ td, th {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("font/PTSans-Regular.eot?") format("eot"), url("font/PTSans-Regular.woff2") format("woff2"), url("font/PTSans-Regular.woff") format("woff"); }
+  src: url("../font/PTSans-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../font/PTSans-Bold.ttf") format("truetype"); }
 
 body {
-  background: blue; }
+  background: white;
+  font-family: 'PT Sans'; }
+  body .boldest {
+    font-weight: 700; }

@@ -4,5 +4,10 @@
 
 
 body {
-    background: blue;
+    background: white;
+    font-family: 'PT Sans';
+
+    .boldest {
+      font-weight: 700;
+    }
 }
