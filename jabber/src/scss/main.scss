@@ -1,13 +1,21 @@
 @import 'mixins';
 @import 'init/reset';
 @import 'typography';
+@import 'components/header';
 
 
 body {
     background: white;
     font-family: 'PT Sans';
 
+    margin-top: 1.5rem;
+    // padding: 2rem 1.5rem;
     .boldest {
       font-weight: 700;
     }
+}
+
+.content-fit {
+  max-width: 1400px;
+  margin: 0 auto;
 }

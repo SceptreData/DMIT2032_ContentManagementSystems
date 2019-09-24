@@ -1,2 +1,21 @@
 @include font-face('PT Sans', "../font/PTSans-Regular", 400, normal, ttf);
 @include font-face('PT Sans', "../font/PTSans-Bold", 700, bold, ttf);
+
+h1 {
+    font-size: 3.75rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+.big-font {
+    font-size: 3.75rem;
+}
+
+body {
+    font-family: 'PT Sans';
+    .boldest {
+      font-weight: 700;
+    }
+}

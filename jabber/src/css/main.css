@@ -46,8 +46,138 @@ td, th {
   font-weight: 700;
   src: url("../font/PTSans-Bold.ttf") format("truetype"); }
 
+h1 {
+  font-size: 3.75rem; }
+
+h2 {
+  font-size: 2.25rem; }
+
+.big-font {
+  font-size: 3.75rem; }
+
 body {
-  background: white;
   font-family: 'PT Sans'; }
   body .boldest {
     font-weight: 700; }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem 1.5rem 2rem; }
+
+.logo {
+  display: flex;
+  align-items: center; }
+  .logo span {
+    font-weight: 700;
+    font-size: 2.25rem; }
+
+nav > ul {
+  position: fixed;
+  margin-left: 100%; }
+  @media only screen and (min-width: 540px) {
+    nav > ul {
+      margin-left: 0;
+      position: static;
+      display: flex;
+      justify-content: space-between; } }
+
+nav a, nav a:visited {
+  color: #222;
+  text-decoration: none; }
+
+nav a:hover {
+  color: #777; }
+
+nav ul > li {
+  font-weight: 700;
+  margin-right: 1rem;
+  font-size: .8rem; }
+  @media only screen and (min-width: 540px) {
+    nav ul > li {
+      font-size: 1rem; } }
+
+nav ul > li:last-of-type {
+  margin-right: 0; }
+
+.sign-in-btn, .sign-in-btn:visited {
+  color: #767676;
+  border: 1px solid #d8d8d8;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .8rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.sign-in-btn:hover {
+  background: #d1d1d1;
+  color: #838383;
+  transition: all .3s ease-in; }
+
+button {
+  background: none;
+  border: 0; }
+  button svg {
+    width: 35px; }
+  @media only screen and (min-width: 540px) {
+    button {
+      display: none; } }
+
+.hero {
+  padding: 0 2rem;
+  min-height: 320px;
+  background: url(../../img/hero-sm.jpg) no-repeat;
+  display: flex; }
+  .hero h2 {
+    font-size: 1.75rem;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.774);
+    border-radius: 4px;
+    padding: .5rem;
+    margin-bottom: 3.75rem; }
+  .hero div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  @media screen and (min-width: 540px) {
+    .hero {
+      background: url(../../img/hero-md.jpg) no-repeat; }
+      .hero h2 {
+        font-size: 2.25rem;
+        background: none; }
+      .hero div {
+        width: 50%; } }
+  @media screen and (min-width: 960px) {
+    .hero {
+      min-height: 640px;
+      background: url(../../img/hero.png) center center no-repeat;
+      background-size: cover; }
+      .hero h2 {
+        font-size: 3.75rem; } }
+
+.hero-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  background: #f52d6b;
+  padding: .5rem 1.25rem;
+  border-radius: 6px; }
+  @media screen and (min-width: 540px) {
+    .hero-btn {
+      font-size: 1.5rem; } }
+
+body {
+  background: white;
+  font-family: 'PT Sans';
+  margin-top: 1.5rem; }
+  body .boldest {
+    font-weight: 700; }
+
+.content-fit {
+  max-width: 1400px;
+  margin: 0 auto; }
