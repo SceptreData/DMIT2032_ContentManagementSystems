@@ -1,0 +1,15 @@
+section {
+  .focus-on {
+    font-size: 1.5rem;
+    color: #497a92;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    @media screen and (min-width: $screen-md){
+      font-size: 3.75rem;
+    }
+  }
+}

@@ -2,68 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Jabber</title>
-    <link rel="stylesheet" href="css/main.css">
+  <title>Jabber</title>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header>
-        <div class="site-nav">
-            <div class="logo">
-                <img src="img/logo.png" alt="Jargon Logo">
-                <span>argon</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">new courses</a></li>
-                    <li><a href="#">articles</a></li>
-                    <li><a href="#">javascript</a></li>
-                    <li><a href="#">css</a></li>
-                    <li><a href="#">frameworks</a></li>
-                    <li><a href="#">builds</a></li>
-                    <li><a href="#">ui/ux</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="sign-in-btn">Sign in</a>
-            <button class="menu-btn">
-                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
-                    class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512">
-                    <path fill="currentColor"
-                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
-                    </path>
-                </svg>
-            </button>
+  <header class="site-header">
+    <div class="site-nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Jargon Logo">
+        <span>argon</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">new courses</a></li>
+          <li><a href="#">articles</a></li>
+          <li><a href="#">javascript</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">frameworks</a></li>
+          <li><a href="#">builds</a></li>
+          <li><a href="#">ui/ux</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="sign-in-btn">Sign in</a>
+      <button class="menu-btn">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+          class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path fill="currentColor"
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+          </path>
+        </svg>
+      </button>
 
-        </div>
-        <div class="hero">
-            <div class="content-fit">
-                <h2>Online Training For Web Professionals</h2>
-                <a href="#" class="hero-btn">Sign Up for a Free Trial</a>
-            </div>
-            <div></div>
-        </div>
-    </header>
-    <section class="popular-videos">
-
-    <div class="video-card">
-      <img src="" alt="">
-      <header class="flex-row">
-        <p>by <span>Robert Moreno</span></p>
-        <div class="price">$99</div>
-      </header>
-      <div class="rating"></div>
-      <footer>
-        <div class="course-duration"></div>
-        <div class="course-difficulty"></div>
-        <div class="course-lang"></div>
-      </footer>
     </div>
 
+    <div class="hero">
+      <div class="content-fit">
+        <h2>Online Training For Web Professionals</h2>
+        <a href="#" class="hero-btn">Sign Up for a Free Trial</a>
+      </div>
+      <div></div>
+    </div>
+  </header>
+
+  <section class="content-fit">
+    <header>
+      <span class="focus-on">focus on</span>
+      <h2>
+        Popular Video Courses
+      </h2>
+      <div class="blue-underline"></div>
+    </header>
+
+    <div class="video-group">
+      <article class="video-card">
+        <img src="img/bootstrap.jpg" alt="Learn Bootstrap">
+        <header>
+          <h3>Bootstrap for Developers</h3>
+          <div class="flex-row between">
+            <p>by <span class="author-name">Robert Moreno</span></p>
+            <div class="price">$99</div>
+          </div>
+
+        </header>
+        <div class="rating"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, sed blanditiis placeat facere laborum
+          repellendus eveniet aperiam modi vero. </p>
+        <footer>
+          <div class="separator"></div>
+          <div class="course-duration"></div>
+          <div class="course-difficulty"></div>
+          <div class="course-lang"></div>
+        </footer>
+      </article>
+
+      <article class="video-card">
+        <img src="img/wp-training.jpg" alt="Learn Bootstrap">
+        <header>
+          <h3>Bootstrap 5 Training</h3>
+          <div class="flex-row between">
+            <p>by <span class="author-name">David Bergeron</span></p>
+            <div class="price">$99</div>
+          </div>
+        </header>
+
+        <div class="rating"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, sed blanditiis placeat facere laborum
+          repellendus eveniet aperiam modi vero. </p>
+
+        <footer>
+          <div class="separator"></div>
+          <div class="course-duration"></div>
+          <div class="course-difficulty"></div>
+          <div class="course-lang"></div>
+        </footer>
+      </article>
+
+      <article class="video-card">
+        <img src="img/future-ui.jpg" alt="Learn Bootstrap">
+        <header>
+          <h3>Mobile UI/UX Design</h3>
+          <div class="flex-row between">
+            <p>by <span class="author-name">Jill Evans</span></p>
+            <div class="price">$99</div>
+          </div>
+        </header>
+        <div class="rating"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, sed blanditiis placeat facere laborum
+          repellendus eveniet aperiam modi vero. </p>
+        <footer>
+          <div class="separator"></div>
+          <div class="course-duration"></div>
+          <div class="course-difficulty"></div>
+          <div class="course-lang"></div>
+        </footer>
+      </article>
+    </div>
   </section>
 
   <section class="featured-articles">
@@ -78,7 +136,9 @@
     <div class="tooling-content">
       <h3>Fluid - a complete set of tools for prototyping.</h3>
       <time>06 August 2019</time>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in asperiores impedit sint vitae soluta magnam velit sapiente provident dolores perferendis aspernatur doloremque dignissimos natus debitis nemo laborum, reprehenderit eaque.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate in asperiores impedit sint vitae soluta
+        magnam velit sapiente provident dolores perferendis aspernatur doloremque dignissimos natus debitis nemo
+        laborum, reprehenderit eaque.</p>
       <figure>
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
           <path fill="#0E1E25"
@@ -94,7 +154,9 @@
       <img src="" alt="">
       <h4>Jon Doe</h4>
       <h3>Designer</h3>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, ipsum harum praesentium enim ratione earum, vel sunt autem debitis rem dignissimos dolores magni, blanditiis dolorem tempora aliquam dolorum accusamus assumenda!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, ipsum harum praesentium enim ratione earum,
+        vel sunt autem debitis rem dignissimos dolores magni, blanditiis dolorem tempora aliquam dolorum accusamus
+        assumenda!</p>
       <div class="social-media">
       </div>
     </div>

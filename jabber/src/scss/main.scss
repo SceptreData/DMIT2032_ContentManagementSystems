@@ -1,7 +1,11 @@
 @import 'mixins';
 @import 'init/reset';
+@import 'vars';
 @import 'typography';
+@import 'util';
 @import 'components/header';
+@import 'components/section';
+@import 'components/videos';
 
 
 body {
@@ -9,13 +13,14 @@ body {
     font-family: 'PT Sans';
 
     margin-top: 1.5rem;
-    // padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem;
     .boldest {
       font-weight: 700;
     }
 }
 
-.content-fit {
-  max-width: 1400px;
-  margin: 0 auto;
+
+.blue-underline {
+  width: 178px;
+  border-bottom: 3px solid #1cb3c8;
 }
