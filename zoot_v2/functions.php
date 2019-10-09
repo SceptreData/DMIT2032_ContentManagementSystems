@@ -19,7 +19,4 @@ function zoot_styles(){
 }
 add_action('wp_enqueue_scripts', 'zoot_styles');
 
-echo get_template_directory_uri();
-echo get_stylesheet_uri();
-
 ?>
