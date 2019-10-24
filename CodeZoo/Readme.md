@@ -1,114 +1,47 @@
-# <img src="./assets/images/wordpress-water-mark.png" width="100" align="center"> WordPress Custom Post Types
+[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-## Creating A Custom Post Type Using Code
-In the previous class we looked at creating custom post types from scratch using code. The WordPress register_post_type() method was central to creating the custom movies post type. Here is a quick overview of the code. We were able to change the icons the where the custom post type was displayed in the dashboard and and and remove elements that make up the post panel.
+_s
+===
 
-```php
-//function creates a custom post type of movies
-function create_post_type_movies()
-{
-    // creates label names for the post type in the dashboard the post panel and in the toolbar.
-    $labels = array(
-               'name' => __('Movies'),
-               'singular_name' => __('Movie'),
-               'add_new' => 'New Movie',
-               'add_new_item'=> 'Add New Movie',
-               'edit_item' => 'Edit Movie',
+Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
-    );
-    // creates the post functionality that you want for a full listing see the link attached above
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'movies'),
-         'menu_position' => 5,
-         'menu_icon' => 'dashicons-admin-media',
-         'supports'=> array('title', 'editor', 'custom-fields'
-    );
+My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
-   register_post_type('movies', $args  );
-}
-// Hooking up our function to theme setup
-add_action('init', 'create_post_type_movies');
+* A just right amount of lean, well-commented, modern, HTML5 templates.
+* A helpful 404 template.
+* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
+* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
+* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
+* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
+* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
+Note: `.no-sidebar` styles are not automatically loaded.
+* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
+* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
+* Licensed under GPLv2 or later. :) Use it to make something cool.
 
-```
+Getting Started
+---------------
 
-For a full list of properties that the register_post_type() method [supports visit](https://codex.wordpress.org/Function_Reference/register_post_type#supports).
+If you want to keep it simple, head over to https://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
 
-We also turned the Gutenberg post editor off in the functions.php file. The current functions.php file still has this line of code in it.
+If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a five-step find and replace on the name in all the templates.
 
-```php
-  add_filter('use_block_editor_for_post', '__return_false', 10);
+1. Search for `'_s'` (inside single quotations) to capture the text domain.
+2. Search for `_s_` to capture all the function names.
+3. Search for `Text Domain: _s` in `style.css`.
+4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
+5. Search for `_s-` to capture prefixed handles.
 
-```
+OR
 
-## Custom Post Type Using Plugins
-By far the easiest quickest and simplest method to create custom post types is with plugins. We saw that register_post_type() has a whole lot of properties we can set. Likewise so will the plugins. We also used the custom field option in the post editor to add a specific piece of content to the custom post. You should have some familuarity with the options of these plugins.
+1. Search for: `'_s'` and replace with: `'megatherium-is-awesome'`.
+2. Search for: `_s_` and replace with: `megatherium_is_awesome_`.
+3. Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium-is-awesome` in `style.css`.
+4. Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
+5. Search for: `_s-` and replace with: `megatherium-is-awesome-`.
 
-Start by installing the following plugins
-1. Custom Post Type UI
-1. Advanced Custom Fields
-1. Dashicons + Custom Post Types
+Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
-Make sure and activate all of these plugins. We will create a Features Custom Post Type.
-1. Open the style.css and increment the version number of the file and give it a description.
-1. Create a template file for our features called single-features.php.
-1. Upload your new template file to your themes directory.
-1. Located in the dashboard sidebar at the bottom you will see an icon with squares named CPT UI.
-1. Click on the add/edit post types.
-1. Fill out the options that you wish your custom post type to have.
-1. If you installed dash-icons you can use that to add a custom icon to your post type.
-1. You can also easily create your own icon using this plugin.
-1. Save the custom post type and create a new feature.
-1. You should see your single-features.php file showing up.
-1. Now lets add code to single.php to get it to display the title and the content.
+Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
-
-```php
-
-<?php get_header() ?>
-
-<main id="main" class="site-main" role="main">
-	<article id="post-<?php the_ID(); ?>" class="card">
-	
-		<?php while ( have_posts() ) : the_post();?>
-		<div class="post-container">
-		    <header class="post-header">
-				<h2 class="post-title"><?php echo the_title(); ?><h2>
-			</header>
-			<div class="post-content">
-				<?php  echo the_content(); ?>
-			</div>
-		</div>
-
-
-
-		<footer class="post-footer">
-			<h3>partial</h3>
-			<p>generated by: single-features.php</p>
-			<p>template location: <span class="attention">single-features.php</span></p>
-		</footer>
-
-	</article>
-	<?php endwhile; ?>
-	
-</main>
-
-<?php get_footer(); ?>
-
-```
-
- 
-
-## Creating A Custom Loading Interface for Your Post Type
-Go to the dashboard advanced custtom fields option in the toolbar and select add new
-1. 
-
-
-
-
-
-
-## Folder Structure Best Practices
-WordPress does have a folder structure that it would like you to follow. You can find the full details of [Organizing WordPress Files and Folders](https://developer.wordpress.org/themes/basics/organizing-theme-files/) 
+Good luck!
