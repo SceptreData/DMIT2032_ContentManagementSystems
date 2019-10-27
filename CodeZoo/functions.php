@@ -161,7 +161,9 @@ add_action( 'widgets_init', 'codezoo_widgets_init' );
  * Enqueue scripts and styles.
  */
 function codezoo_scripts() {
-	wp_enqueue_style( 'codezoo-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'codezoo-style', get_stylesheet_uri() );
+
+  wp_enqueue_script( 'gutenberg-typography', get_template_directory_uri() . '/js/gutenberg.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'codezoo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

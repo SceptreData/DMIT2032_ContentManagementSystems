@@ -5,48 +5,29 @@ Author: David Bergeron
 Author URI: http://www.davidbergeron.ca
 Description: DMIT2032 Project Site
 Version: 1.0.0
-License: GNU General Public License v2 or later
+License: MIT
 License URI: LICENSE
 Text Domain: codezoo
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
-CodeZoo is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+CodeZoo is based on Underscores https://underscores.me/ 
+(C) 2012-2017 Automattic, Inc.
+
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
 @import "init/reset";
-@import "vars";
 @import "mixins";
-@import "typography";
+@import "typography/index";
+@import "vars";
+@import "components/links";
+
 
 body {
-	background: red;
+  background: $gray-200;
+  color: $gray-900;
+  padding: 1rem 1.75rem;
+  max-width: 960px;
+  margin: 0 auto;
 }

@@ -22,7 +22,10 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'codezoo' ); ?></a>
+  <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'codezoo' ); ?></a>
+  <div class="toggleWrapper">
+		<a id="btnToggleGrid" class="btnToggleGrid" href="javascript:void(0)">Turn Grid On</a>
+	</div>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">

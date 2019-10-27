@@ -12,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gutenberg-web-type": "^1.2.3",
     "node-sass": "^4.13.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4"
   }
 }
